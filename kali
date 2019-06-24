@@ -27,3 +27,10 @@ apt-get update
 apt-get install sublime-text -y
 apt-get install nodejs -y
 sudo apt-get install npm -y
+
+
+
+
+
+ln -s /mnt/hgfs/Shared/ ~/Shared
+
