@@ -34,6 +34,8 @@ sudo apt-get install apache2 -y
 sudo apt-get install wireshark -y
 sudo apt-get install tshark -y
 
+sudo usermod -a -G wireshark $USER
+
 ln -s /mnt/hgfs/Shared/ ~/Shared
 
 dconf write /org/gnome/shell/favorite-apps "['firefox.desktop', 'org.gnome.Terminal.desktop', 'org.gnome.gedit.desktop', 'gnome-calculator.desktop']"
