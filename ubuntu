@@ -38,6 +38,8 @@ sudo apt-get install jdk -y
 
 sudo apt-get install netdiscover -y
 sudo apt-get install arp-scan -y
+sudo apt-get install nbtscan -y
+
 
 sudo usermod -a -G wireshark $USER
 
