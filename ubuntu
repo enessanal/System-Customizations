@@ -51,14 +51,6 @@ pip3 install bs4
 pip3 install pymodbus
 pip3 install pyModbusTCP
 
-
-
----------------------------------------------------
-sudo apt-get update
-curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
----------------------------------------------------
-
-
 sudo usermod -a -G wireshark $USER
 
 ln -s /mnt/hgfs/Shared/ ~/Shared
@@ -85,6 +77,11 @@ gsettings set "org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/prof
 gsettings set "org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$profile/" audible-bell true
 
 
+
+---------------------------------------------------
+sudo apt-get update
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
+---------------------------------------------------
 
 
 
