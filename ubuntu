@@ -52,6 +52,12 @@ pip3 install pymodbus
 pip3 install pyModbusTCP
 
 
+
+---------------------------------------------------
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
+---------------------------------------------------
+
+
 sudo usermod -a -G wireshark $USER
 
 ln -s /mnt/hgfs/Shared/ ~/Shared
