@@ -40,7 +40,8 @@ sudo apt-get install git -y
 sudo apt-get install netdiscover -y
 sudo apt-get install arp-scan -y
 sudo apt-get install nbtscan -y
-sudo apt-get install aircrack-ng
+sudo apt-get install aircrack-ng -y
+sudo apt-get install nikto -y
 
 pip3 install flask
 pip3 install bs4
