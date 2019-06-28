@@ -45,6 +45,8 @@ sudo apt-get install nikto -y
 sudo apt-get install whois -y
 sudo apt-get install hping3 -y
 sudo apt-get install sslscan -y
+sudo apt install wfuzz -y
+sudo apt install dirb -y
 
 pip3 install flask
 pip3 install bs4
