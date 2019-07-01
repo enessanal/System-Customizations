@@ -1,0 +1,40 @@
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v HideFileExt /t REG_DWORD /d 0 /f
+
+-- Desktop icons
+-- Windows + E => Open File Explorer to This PC (not Quick access)
+-- Display delete confirmation dialog
+-- Touchpad reverse
+-- Show recently used files in Quick Access [not checked]
+-- Show frequently used folders in Quick access
+-- show recently opened items in jump lists [cancel]
+-- Screenshot location set desktop
+
+
+POWER OPTIONS:
+- Turn off hard disk after:
+	on battery 0
+	plugged in 0
+- Sleep after
+	on battery 90
+	plugged in 0
+- Hibernate after
+	on battery 0
+	plugged in 0
+- Intel Graphics Power Plan
+	on battery Balanced
+	plugged in Maximum Performance
+- Lid Close Action
+	on battery Do nothing
+	plugged in Do nothing
+- Turn off display after
+	on battery 10
+	plugged in 20
+
+Programs
+--------
+- Java
+- VsCode
+- Sublime Text
+- Notepad ++
+- VirtualBox
+- Vmware
