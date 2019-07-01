@@ -13,6 +13,7 @@ echo "alias lltr=\"ls --time-style='+%d.%m.%y %H:%M:%S' -lahFhtr --color=always\
 echo "bind ^S savefile main" >> ~/.nanorc
 touch ~/Templates/New\ Document
 
+
 sudo apt-get update
 sudo apt-get install net-tools -y
 sudo apt-get install htop -y
