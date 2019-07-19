@@ -28,6 +28,8 @@ apt-get install sublime-text -y
 apt-get install nodejs -y
 sudo apt-get install npm -y
 
+apt install jd-gui -y
+
 
 
 

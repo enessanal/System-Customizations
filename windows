@@ -8,6 +8,9 @@ reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v Hide
 -- Show frequently used folders in Quick access
 -- show recently opened items in jump lists [cancel]
 -- Screenshot location set desktop
+-- Choose when to be notified about changes to your computer => always
+
+-- Programs and Features" or "Programs > Turn Windows features on or off > Telnet Client
 
 
 POWER OPTIONS:
@@ -30,6 +33,8 @@ POWER OPTIONS:
 	on battery 10
 	plugged in 20
 
+
+
 Programs
 --------
 - Java
@@ -38,3 +43,4 @@ Programs
 - Notepad ++
 - VirtualBox
 - Vmware
+- Sqlite browser
