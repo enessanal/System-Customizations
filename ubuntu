@@ -48,6 +48,7 @@ sudo apt-get install hping3 -y
 sudo apt-get install sslscan -y
 sudo apt install wfuzz -y
 sudo apt install dirb -y
+sudo apt install onesixtyone -y
 
 sudo apt install binwalk -y
 
