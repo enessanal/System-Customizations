@@ -1,5 +1,9 @@
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v HideFileExt /t REG_DWORD /d 0 /f
 
+- Display settings Scale => 100%
+- Desktop icons settings => Computer, Control Panel, Recyle Bin, User's File
+- BurpFK in C:
+- uac always notify
 -- Desktop icons
 -- Windows + E => Open File Explorer to This PC (not Quick access)
 -- Display delete confirmation dialog
@@ -44,3 +48,28 @@ Programs
 - VirtualBox
 - Vmware
 - Sqlite browser
+
+
+Backups:
+- netsh wlan export profile ***=*****
+- Sticky notes
+
+
+
+Cmd terminal:
+	Font
+		Size: 14
+		Font: Lucida Console
+
+	Options
+		Buffer Size: 999
+		Number of Buffer: 999
+
+	Colors:
+		Opacity: 85
+
+	Terminal
+		Use Seperate Background: Checked
+			Red: 213
+			Green: 220
+			Blue: 230

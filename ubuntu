@@ -16,8 +16,11 @@ touch ~/Templates/New\ Document
 
 sudo apt-get update
 sudo apt-get install net-tools -y
+
 sudo apt-get install htop -y
+
 sudo apt-get install tree -y
+
 
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
@@ -95,7 +98,10 @@ curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/t
 
 
 
+shortcut nautilus => windows+e
 
+
+Burp?
 
 
 

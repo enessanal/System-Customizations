@@ -36,3 +36,9 @@ apt install jd-gui -y
 
 ln -s /mnt/hgfs/Shared/ ~/Shared
 
+
+
+
+
+
+gnome-terminal => CTRL+ALT+T
