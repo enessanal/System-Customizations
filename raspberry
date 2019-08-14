@@ -1,0 +1,33 @@
+echo "alias cls='clear'" | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias ..=\"cd ..\" " | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias ...=\"cd ..\\..\" " | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias ....=\"cd ..\\..\\..\" " | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias .....=\"cd ..\\..\\..\\..\" " | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias l=ls"  | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias ll=\"ls --time-style='+%d.%m.%y %H:%M:%S' -lahFh --color=always\" " | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias lls=\"ls --time-style='+%d.%m.%y %H:%M:%S' -lahFhS --color=always\"" | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias llsr=\"ls --time-style='+%d.%m.%y %H:%M:%S' -lahFhSr --color=always\"" | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias llt=\"ls --time-style='+%d.%m.%y %H:%M:%S' -lahFht --color=always\"" | sudo tee --append /etc/bash.bashrc > /dev/null
+echo "alias lltr=\"ls --time-style='+%d.%m.%y %H:%M:%S' -lahFhtr --color=always\"" | sudo tee --append /etc/bash.bashrc > /dev/null
+
+echo "bind ^S savefile main" >> ~/.nanorc
+
+
+sudo apt-get update
+
+sudo apt-get install nmap -y
+sudo apt-get install netdiscover -y
+sudo apt-get install tmux
+sudo apt-get install matchbox-keyboard
+
+
+pip3 install flask
+pip3 install bs4
+sudo pip3 install pymodbus
+pip3 install pyModbusTCP
+
+
+------------------------------
+crontab:
+	@reboot vncserver -geometry 1920x1080
+	@reboot sudo /usr/bin/python3 /home/pi/Desktop/ModbusTCPServer.py
