@@ -1,62 +1,37 @@
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v HideFileExt /t REG_DWORD /d 0 /f
-
-- Display settings Scale => 100%
-- Desktop icons settings => Computer, Control Panel, Recyle Bin, User's File
-- BurpFK in C:
-- uac always notify
--- Desktop icons
--- Windows + E => Open File Explorer to This PC (not Quick access)
--- Display delete confirmation dialog
--- Touchpad reverse
--- Show recently used files in Quick Access [not checked]
--- Show frequently used folders in Quick access
--- show recently opened items in jump lists [cancel]
--- Screenshot location set desktop
--- Choose when to be notified about changes to your computer => always
-
--- Programs and Features" or "Programs > Turn Windows features on or off > Telnet Client
-
-
-POWER OPTIONS:
-- Turn off hard disk after:
-	on battery 0
-	plugged in 0
-- Sleep after
-	on battery 90
-	plugged in 0
-- Hibernate after
-	on battery 0
-	plugged in 0
-- Intel Graphics Power Plan
-	on battery Balanced
-	plugged in Maximum Performance
-- Lid Close Action
-	on battery Do nothing
-	plugged in Do nothing
-- Turn off display after
-	on battery 10
-	plugged in 20
-
-
-
-Programs
---------
-- Java
-- VsCode
-- Sublime Text
-- Notepad ++
-- VirtualBox
-- Vmware
-- Sqlite browser
-
-
-Backups:
+Backup
+----------------------------------------------------------
+- Sticky Notes
+- Chrome Bookmarks
 - netsh wlan export profile ***=*****
-- Sticky notes
+----------------------------------------------------------
+
+
+- File name extensions: ON
+- Hidden Items: ON => reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v HideFileExt /t REG_DWORD /d 0 /f
+- Quick Access -> Open File Explorer to "This PC"
+- Quick Access, Privacy -> Show recently used files in Quick access: OFF
+- Quick Access, Privacy -> Show frequentky used folders in Quick access: OFF
+- Recycle Bin Properties -> Display delete confirmation dialog: ON
+- Desktop Icon Settings: Computer, Control Panel, Recycle Bin
+- Connect to Internet
+- Check for updates
+- Change product key
+- Upgrade system with updates
+- Add microsoft account
+- Scale and Layout: 100%
+- Combine taskbar buttons: When taskbar is full
+- Jump Lists: Off
+- Indexing Options -> Modify: C:
+- Touchpad Settings -> Scrolling Direction: Down motion scrolls down
+- Touchpad Settings -> Three-finger gestures -> Taps: Play/Pause
+- UAC: Always Notify
+- Pictures -> Screenshot -> Location -> Move: Desktop
+- Programs and Features" or "Programs > Turn Windows features on or off > Telnet Client
 
 
 
-Cmd terminal:
+Cmd terminal
+----------------------------------------------------------
 	Font
 		Size: 14
 		Font: Lucida Console
@@ -67,9 +42,73 @@ Cmd terminal:
 
 	Colors:
 		Opacity: 85
+----------------------------------------------------------
 
-	Terminal
-		Use Seperate Background: Checked
-			Red: 213
-			Green: 220
-			Blue: 230
+
+
+POWER OPTIONS
+----------------------------------------------------------
+- Turn off hard disk after:
+	on battery 0
+	plugged in 0
+
+- Sleep after
+	on battery 90
+	plugged in 0
+
+- Hibernate after
+	on battery 0
+	plugged in 0
+
+- Intel Graphics Power Plan
+	on battery Balanced
+	plugged in Maximum Performance
+
+- Lid Close Action
+	on battery Do nothing
+	plugged in Do nothing
+
+- Turn off display after
+	on battery 10
+	plugged in 20
+----------------------------------------------------------
+
+
+
+Programs
+----------------------------------------------------------
+- In setup.office.com give product key and download office
+- Chrome
+- Sublime Text
+- Opera Browser
+- Notepad++
+- VMware Workstation Pro
+- Google Drive Sync
+- Java
+- Python
+- Burp Suite
+- Mozilla Firefox
+- Genymotion
+- Asus ATK
+- Grenshot
+- 7-Zip
+- CheckPoint VPN
+- Pulse Secure VPN
+- WinScp
+- Github Desktop
+- Nmap
+- PHP
+- Postman
+- Bitdefender
+- Visual Studio Code
+- Wireshark
+----------------------------------------------------------
+
+
+
+
+Sublime Key Bindings:
+[
+	{ "keys": ["alt+up"], "command": "swap_line_up" },
+	{ "keys": ["alt+down"], "command": "swap_line_down" },
+]
