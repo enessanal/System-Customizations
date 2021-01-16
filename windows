@@ -5,8 +5,16 @@ Backup
 - Browser Histories
 - netsh wlan export profile ***=*****
 - File System
-- Nessus Scan Results
 - Documents/mycmd folder
+- Virtual Machines File Backups
+- C: -> Burp extensions file
+
+- Sublime Tabs
+- Nessus Scan Results
+- Checkpoint VPN Credentials and Configurations
+- Pulse Secure VPN Credentials and Configurations
+- Burp License Export
+- Windows License Export
 ----------------------------------------------------------
 
 
@@ -30,8 +38,15 @@ Backup
 - Touchpad Settings -> Three-finger gestures -> Taps: Play/Pause
 - UAC: Always Notify
 - Pictures -> Screenshot -> Location -> Move: Desktop
-- Programs and Features" or "Programs > Turn Windows features on or off > Telnet Client
 - secpol.msc -> Local Policies -> Security Options -> "User Account Control: Behaviour of the elavation prompt for administrators in Admin Approval Mode" => "Prompt for credentials"
+- Programs and Features" or "Programs > Turn Windows features on or off > Telnet Client
+- Programs and Features" or "Programs > Turn Windows features on or off > TFTP Client
+- Programs and Features" or "Programs > Turn Windows features on or off > Services for NFS > NFS Client
+- Programs and Features" or "Programs > Turn Windows features on or off > Windows Sandbox
+- Autoplay set to off (Take no action)
+
+- C:\Windows\System32\drivers\etc\host file add: "127.0.0.1 nessus"
+
 
 
 Cmd terminal
@@ -83,6 +98,7 @@ Programs
 ----------------------------------------------------------
 - In setup.office.com give product key and download office
 - Chrome
+- Microsoft Teams
 - Sublime Text
 - Opera Browser
 - Notepad++
@@ -106,7 +122,14 @@ Programs
 - Bitdefender
 - Visual Studio Code
 - Wireshark
+
+
+pip install speedtest-cli
 ----------------------------------------------------------
+
+
+
+
 
 
 
