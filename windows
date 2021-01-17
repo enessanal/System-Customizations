@@ -122,6 +122,7 @@ Programs
 - Bitdefender
 - Visual Studio Code
 - Wireshark
+- SQLite DB Browser
 
 
 pip install speedtest-cli
