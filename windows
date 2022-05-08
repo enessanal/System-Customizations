@@ -18,11 +18,11 @@ Backup
 ----------------------------------------------------------
 
 
-- File name extensions: ON
-- Hidden Items: ON => reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v HideFileExt /t REG_DWORD /d 0 /f
+- File name extensions: ON => reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v HideFileExt /t REG_DWORD /d 0 /f
+- Hidden Items: ON => reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Hidden /t REG_DWORD /d 1 /f
 - Quick Access -> Open File Explorer to "This PC"
 - Quick Access, Privacy -> Show recently used files in Quick access: OFF
-- Quick Access, Privacy -> Show frequentky used folders in Quick access: OFF
+- Quick Access, Privacy -> Show frequently used folders in Quick access: OFF
 - Recycle Bin Properties -> Display delete confirmation dialog: ON
 - Desktop Icon Settings: Computer, Control Panel, Recycle Bin
 - Connect to Internet
@@ -83,10 +83,6 @@ POWER OPTIONS
 	on battery Balanced
 	plugged in Maximum Performance
 
-- Lid Close Action
-	on battery Do nothing
-	plugged in Do nothing
-
 - Turn off display after
 	on battery 10
 	plugged in 20
@@ -127,11 +123,6 @@ Programs
 
 pip install speedtest-cli
 ----------------------------------------------------------
-
-
-
-
-
 
 
 
