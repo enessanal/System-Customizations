@@ -126,6 +126,14 @@ pip install speedtest-cli
 
 
 
+
+- mycmd folder to -> %userprofile%\mycmd
+- Add chrome extensions.
+- Enviroment Profiles -> ADD USER PATH -> %userprofile%\mycmd
+
+
+
+
 Sublime Key Bindings:
 [
 	{ "keys": ["alt+up"], "command": "swap_line_up" },
