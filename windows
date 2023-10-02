@@ -1,141 +1,182 @@
-Backup
-----------------------------------------------------------
+----------------------------
+BC
 - Sticky Notes
 - Chrome Bookmarks
 - Browser Histories
 - netsh wlan export profile ***=*****
 - File System
-- Documents/mycmd folder
+- mycmd folder
 - Virtual Machines File Backups
 - C: -> Burp extensions file
-
 - Sublime Tabs
 - Nessus Scan Results
 - Checkpoint VPN Credentials and Configurations
 - Pulse Secure VPN Credentials and Configurations
 - Burp License Export
 - Windows License Export
-----------------------------------------------------------
+- Intellij License Export
+- Winscp backup
+- Putty backup
+----------------------------
 
+----------------------------
+Settings:
+ - Login outlook.
+ - Create a PIN
+ - Enter Product Key
+ - Update Windows
+ - Activate BitLocker
+ - Save recovery key with encryption
+ - File name extensions: ON => reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v HideFileExt /t REG_DWORD /d 0 /f
+ - Hidden Items: ON => reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Hidden /t REG_DWORD /d 1 /f
+ - Quick Access -> Open File Explorer to "This PC"
+ 	-> Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced, LaunchTo => 1
+ - Jump Lists: Off
+ 	-> HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced, Start_TrackDocs => 0
+ - Quick Access, Privacy -> Show frequently used folders in Quick access: OFF
+ 	-> Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer, ShowFrequent => 0
+ - Quick Access, Privacy -> Show recently used files in Quick access: OFF
+	-> Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer, ShowRecent => 0
+ - Desktop Icons:
+ 	-> This PC
+ 		[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+ 		"{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000000
+ 		[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu] "{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000000
 
-- File name extensions: ON => reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v HideFileExt /t REG_DWORD /d 0 /f
-- Hidden Items: ON => reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Hidden /t REG_DWORD /d 1 /f
-- Quick Access -> Open File Explorer to "This PC"
-- Quick Access, Privacy -> Show recently used files in Quick access: OFF
-- Quick Access, Privacy -> Show frequently used folders in Quick access: OFF
-- Recycle Bin Properties -> Display delete confirmation dialog: ON
-- Desktop Icon Settings: Computer, Control Panel, Recycle Bin
-- Connect to Internet
-- Check for updates
-- Change product key
-- Upgrade system with updates
-- Add microsoft account
-- Scale and Layout: 100%
-- Combine taskbar buttons: When taskbar is full
-- Jump Lists: Off
-- Indexing Options -> Modify: C:
-- Touchpad Settings -> Scrolling Direction: Down motion scrolls down
-- Touchpad Settings -> Three-finger gestures -> Taps: Play/Pause
-- UAC: Always Notify
-- Pictures -> Screenshot -> Location -> Move: Desktop
-- secpol.msc -> Local Policies -> Security Options -> "User Account Control: Behaviour of the elavation prompt for administrators in Admin Approval Mode" => "Prompt for credentials"
-- Programs and Features" or "Programs > Turn Windows features on or off > Telnet Client
-- Programs and Features" or "Programs > Turn Windows features on or off > TFTP Client
-- Programs and Features" or "Programs > Turn Windows features on or off > Services for NFS > NFS Client
-- Programs and Features" or "Programs > Turn Windows features on or off > Windows Sandbox
-- Autoplay set to off (Take no action)
+	-> Control Panel
+		[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel] "{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}"=dword:00000000
+ 		[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu] "{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}"=dword:00000000
 
-- C:\Windows\System32\drivers\etc\host file add: "127.0.0.1 nessus"
+	-> Network
+		[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel] "{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}"=dword:00000000
+		[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu] "{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}"=dword:00000000
 
+	-> User Files
+		[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel] "{59031a47-3f72-44a7-89c5-5595fe6b30ee}"=dword:00000000
+		[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\ClassicStartMenu] "{59031a47-3f72-44a7-89c5-5595fe6b30ee}"=dword:00000000
 
+	-> Scale and Layout: 100%
 
-Cmd terminal
-----------------------------------------------------------
-	Font
-		Size: 14
-		Font: Lucida Console
+ - Recycle Bin Properties -> Display delete confirmation dialog: ON
+ 	-> Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer, ConfirmFileDelete => 1 (RESTART REQUIRED)
 
-	Options
-		Buffer Size: 999
-		Number of Buffer: 999
+ - Combine taskbar buttons: When taskbar is full
+ 	-> Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced, TaskbarGlomLevel => 1 (explorer.exe kill and run)
 
-	Colors:
-		Opacity: 85
-----------------------------------------------------------
+ - Indexing Options -> Modify: C:
+ - Touchpad Settings -> Scrolling Direction: Down motion scrolls down
+ - Touchpad Settings -> Three-finger gestures -> Taps: Play/Pause
+ - UAC: Always Notify
+ - Pictures -> Screenshot -> Location -> Move: Desktop
+ 	=> Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders, {B7BEDE81-DF94-4682-A7D8-57A52620B86F} => %USERPROFILE%\Desktop
+ - secpol.msc -> Local Policies -> Security Options -> "User Account Control: Behaviour of the elavation prompt for administrators in Admin Approval Mode" => "Prompt for credentials"
+ - Programs and Features" or "Programs > Turn Windows features on or off > Telnet Client
+ - Programs and Features" or "Programs > Turn Windows features on or off > TFTP Client
+ - Programs and Features" or "Programs > Turn Windows features on or off > Services for NFS > NFS Client
+ - Programs and Features" or "Programs > Turn Windows features on or off > Windows Sandbox
+ - Autoplay set to off (Take no action)
+ - Computer\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Bluetooth\Audio\AVRCP\CT => DisableAbsoluteVolume
+ - C:\Windows\System32\drivers\etc\hosts file add: "127.0.0.1 nessus"
+ - CMD Terminal
+ 	-> Font Size: 14
+ 	-> Font: Lucida Console
+	-> Options, Buffer Size: 999
+	-> Options, Number of Buffer: 999
+	-> Colors, Opacity: 85
+ - POWER OPTIONS
+ 	-> Turn off hard disk after:
+		on battery 0
+		plugged in 0
 
+	-> Sleep After:
+		Never
+		
+	-> Hibernate After:
+		Never
 
+	-> Intel Graphics Settings:
+		On Battery: Maximum battery life
+		Plugged in: Maximum performance
 
-POWER OPTIONS
-----------------------------------------------------------
-- Turn off hard disk after:
-	on battery 0
-	plugged in 0
+	-> Critical Battery
+		Level: 5
+		Action: Hibernate
 
-- Sleep after
-	on battery 90
-	plugged in 0
+	-> Low Battery
+		Level: 10
+		Action: Do Nothing
+ - Enviroment PATH -> %userprofile%\mycmd\
+----------------------------
 
-- Hibernate after
-	on battery 0
-	plugged in 0
-
-- Intel Graphics Power Plan
-	on battery Balanced
-	plugged in Maximum Performance
-
-- Turn off display after
-	on battery 10
-	plugged in 20
-----------------------------------------------------------
-
-
-
+----------------------------
 Programs
-----------------------------------------------------------
-- In setup.office.com give product key and download office
-- Chrome
-- Microsoft Teams
-- Sublime Text
-- Opera Browser
-- Notepad++
-- VMware Workstation Pro
-- Google Drive Sync
-- Java
-- Python
-- Burp Suite
-- Mozilla Firefox
-- Genymotion
-- Asus ATK
-- Grenshot
-- 7-Zip
-- CheckPoint VPN
-- Pulse Secure VPN
-- WinScp
-- Github Desktop
-- Nmap
-- PHP
-- Postman
-- Bitdefender
-- Visual Studio Code
-- Wireshark
-- SQLite DB Browser
+ - Chrome
+ - Sublime Text
+ - Python (Add python.exe to PATH & Disable Path length limit)
+ - Microsoft Office
+ - Firefox
+ - Brave
+ - Opera (activate VPN)
+ - 7zip
+ - Intellij IDEA
+ - Postman
+ - Greenshot (remove imgur plugin)
+ - Java JDK
+ - ASUS ATK
+ - Obsidian
+ - VS Code
+ - VMware Workstation Pro
+ - Github Desktop
+ - Nodejs
+ 	npm install -g @vue/cli
+ - Burp suite
+ - WinSCP
+----------------------------
 
+----------------------------
+Plugins
+ - python -m pip install --upgrade pip
+ - pip install requests
+ - pip install speedtest-cli
+ - pip install flask
+ - npm install -g @vue/cli
+----------------------------
 
-pip install speedtest-cli
-----------------------------------------------------------
-
-
-
-
-- mycmd folder to -> %userprofile%\mycmd
-- Add chrome extensions.
-- Enviroment Profiles -> ADD USER PATH -> %userprofile%\mycmd
-
-
-
-
+----------------------------
 Sublime Key Bindings:
 [
 	{ "keys": ["alt+up"], "command": "swap_line_up" },
 	{ "keys": ["alt+down"], "command": "swap_line_down" },
-]
+]			
+
+----------------------------
+
+----------------------------
+VsCode
+	"editor.mouseWheelZoom": true
+	install Vue Language Features (Volar) Extension
+	Live Preview Extension - Microsoft 
+	Auto Rename Tag - Jun Han
+	HTML CSS Support - ecmel
+----------------------------
+
+----------------------------
+IntelliJ
+	Change Font Size with Mouse wheel
+	KEYMAPS:
+		Move line down 	=>  alt+down
+		Move line up 	=> alt+up
+		comment with line comment => ctrl + ö
+		comment with block comment => ctrl + shift + ö
+		Redo => ctrl + y
+		Editor close tab => ctrl + w
+		Close all tabs => ctrl + shift + w
+		Reopen closed tab => ctrl + shift + T
+
+	Settings -> Code Style -> Java (assuming) -> Wrapping and Braces, "Braces Placement":
+		in class declaration => next line
+		in method declaration => next line
+
+	Editor, Inlay Hints, Code Vision
+	Default Position for metrics => Right
+----------------------------
